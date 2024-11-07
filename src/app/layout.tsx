@@ -18,6 +18,12 @@ const Layout: React.FC<Props> = ({ children }) => {
 	return (
 		<AuthProvider>
 			<html>
+				<head>
+					<link
+						href="https://fonts.cdnfonts.com/css/mona-sans"
+						rel="stylesheet"
+					/>
+				</head>
 				<body className={"min-h-screen flex flex-col"}>
 					<Navbar />
 					<main>{children}</main>
