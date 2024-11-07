@@ -15,7 +15,7 @@ const PropertyMap = ({ property }) => {
     longitude: 0,
     zoom: 12,
     width: '100%',
-    height: '500px',
+    height: '300px',
   });
   const [loading, setLoading] = useState(true);
   const [geocodeError, setGeocodeError] = useState(false);
@@ -78,7 +78,7 @@ const PropertyMap = ({ property }) => {
           latitude: lat,
           zoom: 15,
         }}
-        style={{ width: '100%', height: 500 }}
+        style={{ width: '100%', height: 300 }}
         mapStyle='mapbox://styles/mapbox/streets-v9'
       >
         <Marker longitude={lng} latitude={lat} anchor='bottom'>
