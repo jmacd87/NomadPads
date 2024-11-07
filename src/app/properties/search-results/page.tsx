@@ -1,5 +1,6 @@
 import connectDB from "@/config/database"
-import Property, { IProperty } from "@/models/Property"
+import Property from "@/models/Property"
+import { PropertiesArray } from "../../types/interfaces"
 import Link from "next/link"
 import PropertyCard from "../../components/PropertyCard"
 import PropertySearchForm from "../../components/PropertySearch"
@@ -13,6 +14,15 @@ interface SearchParams {
 interface SearchResultsPageProps {
 	searchParams: SearchParams
 }
+interface LocationFields {
+	name?: RegExp
+	type?: RegExp
+	description?: RegExp
+	"location.street"?: RegExp
+	"location.city"?: RegExp
+	"location.state"?: RegExp
+	"location.zipcode"?: RegExp
+}
 
 const SearchResultsPage: React.FC<SearchResultsPageProps> = async ({
 	searchParams: { location = "", propertyType = "All" },
@@ -23,7 +33,7 @@ const SearchResultsPage: React.FC<SearchResultsPageProps> = async ({
 	const locationPattern = new RegExp(location, "i")
 
 	// Define the query object
-	const query: Record<string, any> = {
+	const query: { $or: LocationFields[]; type?: RegExp } = {
 		$or: [
 			{ name: locationPattern },
 			{ description: locationPattern },
@@ -34,16 +44,14 @@ const SearchResultsPage: React.FC<SearchResultsPageProps> = async ({
 		],
 	}
 
-	// If `propertyType` is provided and not "All", add it to the query
 	if (propertyType && propertyType !== "All") {
 		const typePattern = new RegExp(propertyType, "i")
 		query.type = typePattern
 	}
-
 	// Fetch the properties based on the query
-	let properties: IProperty[] = []
+	let properties: PropertiesArray = []
 	try {
-		properties = await Property.find(query).lean()
+		properties = await Property.find(query)
 	} catch (error) {
 		console.error("Error fetching properties:", error)
 	}
