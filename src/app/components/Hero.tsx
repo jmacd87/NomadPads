@@ -4,12 +4,13 @@ const Hero = () => {
 	return (
 		<>
 			<section
-				className="bg-white py-20 mb-4 h-64 w-full bg-cover bg-center"
+				className="relative bg-white py-20 mb-4 h-64 w-full bg-cover bg-center"
 				style={{ backgroundImage: `url(${rentalsImage.src})` }}
 			>
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center md:mb-8">
+				<div className="absolute inset-0 bg-gray-800 opacity-50"></div>
+				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center md:mb-8">
 					<div className="text-center">
-						<h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl bg-gradient-to-r from-blue-500 to-black bg-clip-text text-transparent">
+						<h1 className="text-4xl font-extrabold font-mono sm:text-5xl md:text-6xl text-blue-400">
 							Find The Perfect Rental
 						</h1>
 						<p className="my-4 text-xl text-white">
