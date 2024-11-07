@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        sans: ['Poppins', 'san-serif']
+      },
+      gridTemplateColumns: {
+        '70/30': '70% 28%'
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

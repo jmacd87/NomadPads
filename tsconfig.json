@@ -18,9 +18,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "config/database.js", "src/middleware.ts", "src/app/utils/authOptions.ts", "src/app/api/auth/[...nextauth]/route.ts", "src/app/components/AuthProvider.tsx", "src/app/utils/convertToObject.js"],
   "exclude": ["node_modules"]
 }
