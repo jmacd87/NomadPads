@@ -1,5 +1,4 @@
 "use client"
-import Logo from "@/assets/images/NomadPadsTextonly.png"
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect } from "react"
