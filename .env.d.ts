@@ -13,5 +13,6 @@ declare namespace NodeJS {
 		GOOGLE_CLIENT_SECRET: string
 		NEXT_PUBLIC_GOOGLE_GEOCODING_API_KEY: string
 		NEXT_PUBLIC_MAPBOX_TOKEN: string
+		NEXT_PUBLIC_GA_TRACKING_ID: string
 	}
 }
