@@ -71,7 +71,7 @@ const Navbar = () => {
 						</button>
 					</div>
 					<div className="h-16 flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-						<a className="mt-[5px] items-center" href="/">
+						<a className="mb-2 md:mt-[5px]" href="/">
 							{/* <Image className="h-10 w-auto" src={Logo} alt="Nomad Pads" /> */}
 							<svg
 								width="104.4"
