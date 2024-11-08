@@ -17,8 +17,8 @@ const ProfilePage = async () => {
 	})
 	return (
 		<section className="bg-blue-50">
-			<div className="container m-auto py-24">
-				<div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
+			<div className="container m-auto py-6 px-2">
+				<div className="bg-white px-8 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
 					<div className="flex flex-col md:flex-row">
 						<h1 className="text-xl font-bold mb-4">Profile</h1>
 						<div className="md:w-1/2 mt-10">
