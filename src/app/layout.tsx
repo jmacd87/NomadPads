@@ -17,7 +17,7 @@ interface Props {
 	children: React.ReactNode
 }
 
-const GA_TRACKING_ID = "G-62WC2FS3TV" // Your Google Analytics ID
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID
 
 const Layout: React.FC<Props> = ({ children }) => {
 	return (
