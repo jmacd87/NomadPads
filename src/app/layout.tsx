@@ -52,5 +52,4 @@ const Layout: React.FC<Props> = ({ children }) => {
 		</AuthProvider>
 	)
 }
-
 export default Layout
