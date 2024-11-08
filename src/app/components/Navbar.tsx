@@ -209,6 +209,7 @@ const Navbar = () => {
 										role="menuitem"
 										tabIndex={-1}
 										id="user-menu-item-0"
+										onClick={() => setIsProfileMenuOpen(false)}
 									>
 										Your Profile
 									</Link>
@@ -247,6 +248,7 @@ const Navbar = () => {
 							className={`bg-white text-black block rounded-md px-3 py-2 text-base font-medium hover:text-blue-500 ${
 								pathname === "/" && "text-blue-500"
 							}`}
+							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							Home
 						</Link>
@@ -255,6 +257,7 @@ const Navbar = () => {
 							className={`bg-white text-black block rounded-md px-3 py-2 text-base font-medium hover:text-blue-500 ${
 								pathname === "/properties" && "text-blue-500"
 							}`}
+							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							Properties
 						</Link>
@@ -264,6 +267,7 @@ const Navbar = () => {
 							className={`bg-white text-black block rounded-md px-3 py-2 text-base font-medium hover:text-blue-500 ${
 								pathname === "/properties/add" && "text-blue-500"
 							}`}
+							onClick={() => setIsMobileMenuOpen(false)}
 						>
 							Add Property
 						</Link>
