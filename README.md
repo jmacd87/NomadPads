@@ -1,6 +1,6 @@
-# NextApp
+# Nomad Pads
 
-NextApp is a Next.js-based web application that integrates various third-party services, including authentication, cloud storage, mapping, and UI enhancements.
+Nomad Pads is a Next.js-based property managerment web application that integrates various third-party services, including authentication, cloud storage, mapping, and UI enhancements.
 
 ## Features
 
