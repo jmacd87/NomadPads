@@ -77,7 +77,7 @@ nextapp/
 To deploy the app, use:
 
 ```sh
-npm run build
+npm install
 npm run start
 ```
 
