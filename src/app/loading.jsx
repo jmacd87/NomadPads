@@ -1,12 +1,11 @@
-'use-client'
-import ClipLoader from 'react-spinners/ClipLoader'
+'use client'
 
 const LoadingPage = () => {
-    return ( 
-    <div className={"flex items-center justify-center h-screen mt-[-65px]"}>
-        <ClipLoader color="#3b82f6" size={50} aria-label="Loading Spinner" /> 
-    </div>
-    );
+    return (
+        <div className="flex items-center justify-center h-screen">
+            <div className="w-10 h-10 border-4 border-border border-t-clay rounded-full animate-spin" aria-label="Loading" />
+        </div>
+    )
 }
- 
-export default LoadingPage;
+
+export default LoadingPage
