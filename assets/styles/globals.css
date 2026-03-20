@@ -4,23 +4,32 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ffffff;
-    --foreground: #171717;
-}}
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'Mona-Sans', sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* Primary pill button — mirrors Belong's CTA style */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-clay text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-clay-dark transition-colors;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 border-2 border-ink text-ink px-6 py-3 rounded-full text-sm font-semibold hover:bg-ink hover:text-white transition-colors;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 text-ink px-6 py-3 rounded-full text-sm font-semibold hover:bg-stone transition-colors;
   }
 }
